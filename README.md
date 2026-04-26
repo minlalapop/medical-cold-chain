@@ -1,4 +1,4 @@
-# medical chain app
+### medical chain app
 
 application microservices pour gerer le stock medical et la chaine du froid
 
@@ -8,8 +8,7 @@ application microservices pour gerer le stock medical et la chaine du froid
 - surveiller les temperatures
 - generer des alertes
 - garder une trace des actions importantes
-
-## roles
+### roles
 
 - `ADMIN` : vue globale, users, historique
 - `PHARMACIST` : stock, demandes, alertes
@@ -18,7 +17,7 @@ application microservices pour gerer le stock medical et la chaine du froid
 - `QUALITY_MANAGER` : temperature, incidents, alertes, audit
 
 
-## services
+### services
 
 | Service | Port | Role |
 | --- | --- | --- |
@@ -33,7 +32,7 @@ application microservices pour gerer le stock medical et la chaine du froid
 | audit-trail-service | 8087 | journal de tracabilite |
 | frontend | 5173 | dashboard Vue |
 
-## Lancer avec Docker
+### comment lancer avec docker
 
 creer le fichier `.env` local :
 
@@ -41,7 +40,7 @@ creer le fichier `.env` local :
 cp .env.example .env
 ```
 
-modifier les valeurs et build le projet :
+modifier les valeurs de env puis build le projet :
 
 ```bash
 docker compose up --build
