@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/auth_db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8086
+
+jwt:
+  secret: ${JWT_SECRET:DEV_ONLY_CHANGE_THIS_SECRET_KEY_32_CHARS_MINIMUM}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+app:
+  admin:
+    email: ${APP_ADMIN_EMAIL:admin@example.local}
+    password: ${APP_ADMIN_PASSWORD:change-me-admin-password}
+
+user:
+  service:
+    url: ${USER_SERVICE_URL:http://localhost:8085}
+
+audit:
+  service:
+    url: ${AUDIT_SERVICE_URL:http://localhost:8087}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}

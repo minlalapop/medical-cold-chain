@@ -1,0 +1,79 @@
+# macOS / system
+.DS_Store
+Thumbs.db
+
+# IDE / editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.springBeans
+.sts4-cache/
+
+# Logs
+*.log
+logs/
+*.pid
+*.seed
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.yaml
+application-secret.yml
+application-secret.yaml
+**/src/main/resources/application-local.yml
+**/src/main/resources/application-local.yaml
+**/src/main/resources/application-secret.yml
+**/src/main/resources/application-secret.yaml
+
+# Maven / Java
+target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+!.mvn/wrapper/maven-wrapper.jar
+
+# Gradle, just in case
+.gradle/
+build/
+**/build/
+
+# Node / Vue / Vite
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vite/
+**/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test / coverage
+coverage/
+**/coverage/
+.nyc_output/
+
+# Docker local state
+docker-data/
+postgres-data/
+*.dump
+*.sql.gz
+
+# Runtime uploads/temp
+tmp/
+temp/
+*.tmp
